@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 df = pd.read_csv('/userapi/products.csv')
 
@@ -27,5 +27,5 @@ def search_product():
 
     return jsonify(response)
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True, host='0.0.0.0')
